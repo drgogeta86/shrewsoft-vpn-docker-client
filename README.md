@@ -27,5 +27,7 @@ docker run --init --rm -e AUTHORIZED_SSH_KEY="${AUTHORIZED_SSH_KEY}" -d --name v
 sudo docker exec -it vpn-ike ikec -r "${VPN_SITE_NAME}" -u "${VPN_USER}" -p "${VPN_PASSWORD}" -a 
 
 # Stop Daemon
-sudo podman stop vpn-ike
+sudo docker stop vpn-ike
 ```
+
+There are some helper script in `contrib` folder
